@@ -1,5 +1,29 @@
 /**
- * Install MongoDB on your computer and run it on the standard port.
+ * MIT License
+ * 
+ * Copyright (c) 2017 Donato Rimenti
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */ 
+  
+/** 
+ *  Install MongoDB on your computer and run it on the standard port.
  * 
  * Download the HW1-1 from the Download Handout link and uncompress it.
  * 
@@ -8,7 +32,7 @@
  * directory so that you are in the parent directory of the dump directory (if
  * you used the default extraction method, it should be hw1/). Now type:
  * 
- * mongorestore dump 
+ * mongorestore dump
  * 
  * Note you will need to have your path setup correctly to find mongorestore.
  * 
