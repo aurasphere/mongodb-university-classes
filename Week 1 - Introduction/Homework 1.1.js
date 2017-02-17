@@ -1,4 +1,4 @@
-/**
+/*
  * MIT License
  * 
  * Copyright (c) 2017 Donato Rimenti
@@ -22,7 +22,7 @@
  * SOFTWARE.
  */ 
   
-/** 
+/*
  *  Install MongoDB on your computer and run it on the standard port.
  * 
  * Download the HW1-1 from the Download Handout link and uncompress it.
@@ -48,7 +48,9 @@
 // Gets the DB.
 var db = db.getSiblingDB('m101');
 
+// Finds the first element of the collection.
 var element = db.hw1.findOne();
 
 // Prints the result.
+print("Solution : ");
 printjson(element);
