@@ -27,49 +27,50 @@ var db = db.getSiblingDB('enron');
 
 // Finds the emails and counts them.
 var elements = db.messages.aggregate(
-									[
-										// Filters unused fields in order to 
-										// make data lighter.
-										{ $project : 
-													{
-														"headers.From" : 1,
-														"headers.To" : 1,
-														"headers.Message-ID" : 1,
-														"_id" : 0
-													}
-										},
-										// Unwinds the recipients.
-										{ $unwind : "$headers.To" },
-										// Removes duplicates recipients for
-										// the same emails.
-										{ $group : 
-													{	_id : 
-															{	
-																messageId : "$headers.Message-ID",
-																from : "$headers.From",
-																to : "$headers.To"
-															}
-													}
-										},
-										// Counts the emails.
-										{ $group : 
-													{	_id : 
-															{
-																from : "$_id.from",
-																to : "$_id.to"
-															},
-														emails : { $sum : 1 }
-													}
-										},
-										// Sorts them by email count desc.
-										{ $sort : { emails : -1 } },
-										// Gets only the first result.
-										{ $limit : 1 }
-									],
-									// Option to handle more than 16MB
-									// result collections.
-									{allowDiskUse : true}
-									);
+					[
+					// Filters unused fields in order to 
+					// make data lighter.
+					{ $project : 
+							{
+								"headers.From" : 1,
+								"headers.To" : 1,
+								"headers.Message-ID" : 1,
+								"_id" : 0
+							}
+					},
+					// Unwinds the recipients.
+					{ $unwind : "$headers.To" },
+					// Removes duplicates recipients for
+					// the same emails.
+					{ $group : 
+							{ _id : 
+								{	
+									messageId : "$headers.Message-ID",
+									from : "$headers.From",
+									to : "$headers.To"
+								}
+							}
+					},
+					// Counts the emails.
+					{ $group : 
+						{ 
+							_id : 
+								{
+									from : "$_id.from",
+									to : "$_id.to"
+								},
+							emails : { $sum : 1 }
+						}
+					},
+					// Sorts them by email count desc.
+					{ $sort : { emails : -1 } },
+					// Gets only the first result.
+					{ $limit : 1 }
+					],
+					// Option to handle more than 16MB
+					// result collections.
+					{allowDiskUse : true}
+				);
 
 // Prints the result.
 print("Solution : ");
