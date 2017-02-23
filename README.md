@@ -5,4 +5,4 @@ This repository is organized into different folders. Each folder represents a cl
 
  - A zip file with the week's handouts and other courseware material.
  - A batch and a shell script called setup_db which will import the databases/collections used for the weekly exercises. In order to work, this script assumes that you already have a MongoDB instance running on localhost and that you have the MongoDB bin folder on system path and that the handouts zip has been unzipped on the same folder of the script.
- - A folder for each homework of the week. This folder will contain a Freemarker file if the homework is a question that doesn't require the use of the Mongo shell, otherwise it will be a javascript file (you can test the solution passing the javascript file as an argument when opening the Mongo shell).
+ - A folder for each homework of the week. This folder will contain a README file with the problem statement and, if the solution requires the use of the Mongo shell, a javascript file with the query used (you can test it by passing the javascript file as an argument when opening the Mongo shell).
