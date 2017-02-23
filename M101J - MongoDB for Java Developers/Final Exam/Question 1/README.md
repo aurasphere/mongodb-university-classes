@@ -20,3 +20,8 @@ Choose the best answer:
 - 7
 - 9
 - 12
+
+<details>
+  <summary>Click here for the solution</summary>
+  whatever
+</details>
