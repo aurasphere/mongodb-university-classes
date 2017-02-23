@@ -22,12 +22,12 @@
 @REM SOFTWARE.                                                                     
 @REM ================================================================================
 @REM																			
-@REM DESCRIPTION : Sets up the DB for MongoDB University's M101J Week 1 homeworks. 
+@REM DESCRIPTION : Sets up the DB for MongoDB University M101J's Final Exam. 
 @REM AUTHOR : Donato Rimenti																	
 @REM COPYRIGHT : Copyright (c) 2017 Donato Rimenti								
 @REM LICENSE : MIT																 
 @REM																			
 @REM ================================================================================
 
-@REM Restores DB for Homework 1-1.
-mongorestore week_1_introduction.1c495c1dc781/hw1-1__m101j_m101p_5258458de2d4233537765336/dump
+@REM Restores DB for Question 1.
+mongorestore final_exam.885e11cb609a/enron/dump

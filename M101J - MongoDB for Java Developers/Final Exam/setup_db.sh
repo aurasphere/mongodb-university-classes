@@ -24,12 +24,12 @@
 # SOFTWARE.                                                                      #
 # ============================================================================== #
 #																				 #
-# DESCRIPTION : Sets up the DB for MongoDB University's M101J Week 1 homeworks.  #
+# DESCRIPTION : Sets up the DB for MongoDB University M101J's Final Exam. 		 #
 # AUTHOR : Donato Rimenti														 #				
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti									 #
 # LICENSE : MIT																	 # 
 #																				 #
 # ============================================================================== #
 
-# Restores DB for Homework 1-1.
-mongorestore week_1_introduction.1c495c1dc781/hw1-1__m101j_m101p_5258458de2d4233537765336/dump
+# Restores DB for Question 1.
+mongorestore final_exam.885e11cb609a/enron/dump
