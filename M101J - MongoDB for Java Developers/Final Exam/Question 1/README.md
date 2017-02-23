@@ -23,5 +23,5 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  whatever
+  - 3
 </details>
