@@ -27,12 +27,12 @@ var db = db.getSiblingDB('enron');
 
 // Finds the emails and counts them.
 var elements = db.messages.find(
-								{
-									"headers.From" : "andrew.fastow@enron.com",
-									"headers.To" : "jeff.skilling@enron.com"
-								}
-							)
-							.count();
+					{
+						"headers.From" : "andrew.fastow@enron.com",
+						"headers.To" : "jeff.skilling@enron.com"
+					}
+				)
+			.count();
 
 // Prints the result.
 print("Solution : " + elements);
