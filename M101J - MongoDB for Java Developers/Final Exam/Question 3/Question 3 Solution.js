@@ -27,15 +27,15 @@ var db = db.getSiblingDB('enron');
 
 // Updates the email.
 var outcome = db.messages.update(
-									{ 
-										"headers.Message-ID" : "<8147308.1075851042335.JavaMail.evans@thyme>"	
-									},
-									{
-										$push : 
-												{
-													"headers.To" : "mrpotatohead@mongodb.com"
-												}
-									}
+					{ 
+						"headers.Message-ID" : "<8147308.1075851042335.JavaMail.evans@thyme>"	
+					},
+					{
+						$push : 
+							{
+								"headers.To" : "mrpotatohead@mongodb.com"
+							}
+					}
 );
 
 // Prints the outcome.
