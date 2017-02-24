@@ -29,5 +29,12 @@
 @REM																			
 @REM ================================================================================
 
-@REM Restores DB for Question 1.
+@REM Restores DB for Question 1-2-3.
 mongorestore final_exam.885e11cb609a/enron/dump
+
+@REM Restores DB for Question 4.
+mongoimport --drop -d blog -c posts final_exam.885e11cb609a/posts__f4_m101j_m101js_m101p_52d94c86e2d423744501ce90.json
+
+@REM Restores DB for Question 7.
+mongoimport --drop -d photos -c albums final_exam.885e11cb609a/final7__f7_m101_52e000fde2d423744501d031/final7/albums.json
+mongoimport --drop -d photos -c images final_exam.885e11cb609a/final7__f7_m101_52e000fde2d423744501d031/final7/images.json
