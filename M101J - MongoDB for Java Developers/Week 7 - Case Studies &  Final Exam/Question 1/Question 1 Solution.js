@@ -25,18 +25,14 @@
 // Gets the DB.
 var db = db.getSiblingDB('enron');
 
-// Updates the email.
-var outcome = db.messages.update(
-					{ 
-						"headers.Message-ID" : "<8147308.1075851042335.JavaMail.evans@thyme>"	
-					},
-					{
-						$push : 
-							{
-								"headers.To" : "mrpotatohead@mongodb.com"
-							}
-					}
-);
+// Finds the emails and counts them.
+var elements = db.messages.find(
+    {
+        "headers.From" : "andrew.fastow@enron.com",
+        "headers.To" : "jeff.skilling@enron.com"
+    }
+)
+.count();
 
-// Prints the outcome.
-printjson(outcome);
+// Prints the result.
+print("Solution : " + elements);

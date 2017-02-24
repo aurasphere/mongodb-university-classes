@@ -5,7 +5,7 @@ Download Handouts:
 
 ##Final: Question 4
 
-###Enhancing the Blog to support viewers liking certain comments
+*Enhancing the Blog to support viewers liking certain comments*
 
 In this problem, you will be enhancing the blog project to support users liking certain comments and the like counts showing up the in the permalink page.
 

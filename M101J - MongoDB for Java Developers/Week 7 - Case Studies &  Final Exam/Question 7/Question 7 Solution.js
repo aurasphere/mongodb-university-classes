@@ -27,9 +27,9 @@ var db = db.getSiblingDB('photos');
 
 // Adds an index to speed up the process.
 db.albums.createIndex(
-					{
-						images : 1
-					}
+    {
+        images : 1
+    }
 );
 
 // Gets all the photos
@@ -38,27 +38,27 @@ var photos = db.images.find();
 // For each photo, if the id is on one of the album, its skipped, otherwise 
 // is deleted.
 while(photos.hasNext()){
-	var currentPhoto = photos.next();
-	
-	// Checks that there's at least one album for the photo.
-	var album = db.albums.findOne(
-				{
-					images : currentPhoto._id
-				}
-	);
-	
-	// If no album is found for that image, the image is an orphan and thus
-	// is deleted.
-	if(album == null){
-		db.images.deleteOne(currentPhoto);
-	}
+    var currentPhoto = photos.next();
+    
+    // Checks that there's at least one album for the photo.
+    var album = db.albums.findOne(
+        {
+            images : currentPhoto._id
+        }
+    );
+    
+    // If no album is found for that image, the image is an orphan and thus
+    // is deleted.
+    if(album == null){
+        db.images.deleteOne(currentPhoto);
+    }
 }
 
 // Prints the solution.
 var solution = db.images.find(
-							{
-								tags : "sunrises"
-							}
-						)
-						.count();
+    {
+        tags : "sunrises"
+    }
+)
+.count();
 printjson("Solution : " + solution);
