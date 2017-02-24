@@ -14,12 +14,12 @@ Construct a query to calculate the number of messages sent by Andrew Fastow, CFO
 For reference, the number of email messages from Andrew Fastow to John Lavorato (john.lavorato@enron.com) was 1.
 
 Choose the best answer:
-- 1
-- 3
-- 5
-- 7
-- 9
-- 12
+ - 1
+ - 3
+ - 5
+ - 7
+ - 9
+ - 12
 
 <details>
   <summary>Click here for the solution</summary>

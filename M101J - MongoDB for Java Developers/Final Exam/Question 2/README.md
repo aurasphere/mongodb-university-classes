@@ -6,12 +6,12 @@ This problem is a little tricky because a recipient may appear more than once in
 Which pair of people have the greatest number of messages in the dataset?
 
 Choose the best answer:
-- susan.mara@enron.com to jeff.dasovich@enron.com
-- susan.mara@enron.com to richard.shapiro@enron.com
-- soblander@carrfut.com to soblander@carrfut.com
-- susan.mara@enron.com to james.steffes@enron.com
-- evelyn.metoyer@enron.com to kate.symes@enron.com
-- susan.mara@enron.com to alan.comnes@enron.com
+ - susan.mara@enron.com to jeff.dasovich@enron.com
+ - susan.mara@enron.com to richard.shapiro@enron.com
+ - soblander@carrfut.com to soblander@carrfut.com
+ - susan.mara@enron.com to james.steffes@enron.com
+ - evelyn.metoyer@enron.com to kate.symes@enron.com
+ - susan.mara@enron.com to alan.comnes@enron.com
 
 <details>
   <summary>Click here for the solution</summary>
