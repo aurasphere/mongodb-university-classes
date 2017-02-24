@@ -24,7 +24,7 @@
 # SOFTWARE.                                                                      #
 # ============================================================================== #
 #																				 #
-# DESCRIPTION : Sets up the DB for MongoDB University's M101J Week 6 homeworks.  #
+# DESCRIPTION : Sets up the DB for MongoDB University M101J's Week 6 homeworks.  #
 # AUTHOR : Donato Rimenti														 #				
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti									 #
 # LICENSE : MIT																	 # 

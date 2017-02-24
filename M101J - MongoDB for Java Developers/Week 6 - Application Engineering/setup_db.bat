@@ -22,7 +22,7 @@
 @REM SOFTWARE.                                                                     
 @REM ================================================================================
 @REM																			
-@REM DESCRIPTION : Sets up the DB for MongoDB University's M101J Week 1 homeworks. 
+@REM DESCRIPTION : Sets up the DB for MongoDB University M101J's Week 6 homeworks. 
 @REM AUTHOR : Donato Rimenti																	
 @REM COPYRIGHT : Copyright (c) 2017 Donato Rimenti								
 @REM LICENSE : MIT																 
