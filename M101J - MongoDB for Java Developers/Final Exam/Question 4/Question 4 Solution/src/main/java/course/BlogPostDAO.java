@@ -17,17 +17,20 @@
 
 package course;
 
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.MongoCollection;
-
-import org.bson.Document;
+import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Sorts.descending;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static com.mongodb.client.model.Filters.eq;
-import static com.mongodb.client.model.Sorts.descending;
+import org.bson.Document;
+import org.bson.conversions.Bson;
+
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Updates;
+import com.mongodb.client.result.UpdateResult;
 
 public class BlogPostDAO {
     private final MongoCollection<Document> postsCollection;
@@ -89,7 +92,6 @@ public class BlogPostDAO {
         if (email != null && !email.isEmpty()) {
             comment.append("email", email);
         }
-
         postsCollection.updateOne(eq("permalink", permalink),
                                   new Document("$push", new Document("comments", comment)));
     }
@@ -102,5 +104,8 @@ public class BlogPostDAO {
         // on the post identified by `permalink`.
         //
         //
+    	Document toUpdate = new Document("permalink", permalink);
+    	Bson update = Updates.inc("comments." + ordinal + ".num_likes", 1);
+    	postsCollection.updateOne(toUpdate, update);
     }
 }
