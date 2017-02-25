@@ -5,7 +5,7 @@
 	<artifactId>homework-3-1</artifactId>
 	<version>1.0.0</version>
 	<name>Homework 3-1</name>
-	<description>Homework 3-1 of MongoDB M101J class. </description>
+	<description>Homework 3-1 of MongoDB M101J class.</description>
 
 	<dependencies>
 		<dependency>
