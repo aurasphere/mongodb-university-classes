@@ -56,7 +56,7 @@ Now suppose you want to run the following query against the collection.
 Which of the indexes could be used by MongoDB to assist in answering the query? Check all that apply.
 
 Check all that apply:
- - _id_
+ - \_id_
  - a_1_b_1
  - a_1_c_1
  - c_1
