@@ -10,4 +10,5 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
+  - Creating an ascending index on a monotonically increasing value creates index keys on the right-hand side of the index tree.
 </details>
