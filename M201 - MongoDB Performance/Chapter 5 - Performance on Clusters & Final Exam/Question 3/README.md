@@ -8,7 +8,6 @@ Check all that apply:
  - It's common practice to co-locate your mongos on the same machine as your application to reduce latency.
  - Collations can be used to create case insensitive indexes.
 
-
 <details>
   <summary>Click here for the solution</summary>
     <ul>
