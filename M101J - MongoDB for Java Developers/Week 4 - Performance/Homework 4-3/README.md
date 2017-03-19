@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Download Handouts:
  - <a href="https://university.mongodb.com/static/MongoDB_2017_M101J_January/handouts/m101j-blog-indexes.14f2dcc030f8.zip">m101j-blog-indexes.zip</a>
 

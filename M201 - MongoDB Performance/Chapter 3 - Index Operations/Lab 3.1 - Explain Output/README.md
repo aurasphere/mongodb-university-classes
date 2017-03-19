@@ -1,4 +1,4 @@
-#Problem
+# Problem
 In this lab you're going to determine which index was used to satisfy a query given its explain output.
 
 The following query was ran:

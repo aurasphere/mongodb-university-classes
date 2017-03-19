@@ -1,4 +1,4 @@
-#Problem
+# Problem
 In this lab you're going to use the equality, sort, range rule to determine which index best supports a given query.
 
 Given the following query:

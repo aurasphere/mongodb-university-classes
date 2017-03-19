@@ -1,6 +1,6 @@
-#Problem
+# Problem
 Download Handouts:
- - <a href="">hw1-1__m101j_m101p_5258458de2d4233537765336.zip</a>
+ - <a href="https://university.mongodb.com/static/MongoDB_2017_M101J_January/handouts/hw1-1__m101j_m101p_5258458de2d4233537765336.efbe08d5a91a.zip">hw1-1__m101j_m101p_5258458de2d4233537765336.zip</a>
  
 Install MongoDB on your computer and run it on the standard port.
 

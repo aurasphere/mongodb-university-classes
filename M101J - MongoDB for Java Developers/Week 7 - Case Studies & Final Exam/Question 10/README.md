@@ -1,4 +1,4 @@
-#Problem
+# Problem
 *Understanding the output of explain*
 
 We perform the following query on the enron dataset:

@@ -1,4 +1,4 @@
-#Problem
+# Problem
 ##Homework: Homework 6.5 (MongoProc)
 
 *Preface to Homework 6.5 (MongoProc)*

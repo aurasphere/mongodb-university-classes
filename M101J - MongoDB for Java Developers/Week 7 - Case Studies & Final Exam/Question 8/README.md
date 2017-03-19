@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Supposed we executed the following Java code. How many animals will be inserted into the "animals" collection?
 
     import com.mongodb.MongoClient;

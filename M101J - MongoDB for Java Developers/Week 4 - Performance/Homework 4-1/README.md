@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Suppose you have a collection with the following indexes:
 
     > db.products.getIndexes()

@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Given the following indexes:
 
     { categories: 1, price: 1 }

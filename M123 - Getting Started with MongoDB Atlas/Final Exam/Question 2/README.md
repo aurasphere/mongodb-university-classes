@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Horizontally scaling your cluster in Atlas can involve doing which of the following?
 
 Choose the best answer:

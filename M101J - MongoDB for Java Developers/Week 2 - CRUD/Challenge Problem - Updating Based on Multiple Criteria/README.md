@@ -1,4 +1,4 @@
-#Problem 
+# Problem 
 This problem is provided as a supplementary learning opportunity. It is more challenging that the ordinary homework. It is ungraded. We do not ask you submit an answer.
 
 Write an update command that will remove the "tomato.consensus" field for all documents matching the following criteria:

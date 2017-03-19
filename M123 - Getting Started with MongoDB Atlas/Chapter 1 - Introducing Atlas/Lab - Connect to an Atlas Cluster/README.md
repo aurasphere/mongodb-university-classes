@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Now let's connect to the cluster we deployed in an earlier lab. First we will need to whitelist the ip of the computer from which you will connect to the cluster.
 
 <img src="https://s3.amazonaws.com/edu-static.mongodb.com/lessons/M123/whitelist-ip.png"/>

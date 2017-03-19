@@ -1,4 +1,4 @@
-#Problem
+# Problem
 This problem is provided as a supplementary learning opportunity. It is more challenging that the ordinary homework. It is ungraded. We do not ask you submit an answer.
 
 Suppose our movie details documents are structured so that rather than contain an awards field that looks like this:

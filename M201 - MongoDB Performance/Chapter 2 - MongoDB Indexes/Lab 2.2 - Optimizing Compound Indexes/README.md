@@ -1,4 +1,4 @@
-#Problem
+# Problem
 In this lab you're going to examine several example queries and determine which compound index will best service them.
 
     > db.people.find({

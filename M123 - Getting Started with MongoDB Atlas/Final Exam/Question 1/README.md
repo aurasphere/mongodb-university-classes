@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Which of the following are true of replica set configuration in Atlas?
 
 Check all that apply:

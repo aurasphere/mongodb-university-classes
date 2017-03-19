@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Please download <a href="https://s3.amazonaws.com/edu-downloads.10gen.com/enron/enron.zip">the Enron email dataset (link here)</a>, unzip it and then restore it using mongorestore. Note that this is an abbreviated version of the full corpus. There should be 120,477 documents after restore.
 
 The command for mongorestore is:

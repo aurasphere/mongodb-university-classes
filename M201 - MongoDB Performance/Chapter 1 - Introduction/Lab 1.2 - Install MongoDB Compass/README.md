@@ -1,4 +1,4 @@
-#Problem
+# Problem
 For this optional lab you're going to install MongoDB Compass 1.5. This lab is optional because Compass doesn't currently support all Linux distributions.
 
 While Compass, like MongoDB Enterprise, Compass is available as part of the MongoDB Enterprise Advanced subscription it's permitted to be ran outside of production environments.

@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Download Handouts:
  - <a href="https://university.mongodb.com/static/MongoDB_2017_M101J_January/handouts/small_zips.28ecb7fb8fba.json">small_zips.json</a>
 

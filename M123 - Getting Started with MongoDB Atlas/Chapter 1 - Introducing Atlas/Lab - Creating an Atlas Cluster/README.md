@@ -1,4 +1,4 @@
-#Problem
+# Problem
 In this lab, we will create our first cluster in Atlas.
 
 From the "Clusters" tab, click "BUILD A NEW CLUSTER" to get started.

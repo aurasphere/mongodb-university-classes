@@ -1,4 +1,4 @@
-#Problem
+# Problem
 Suppose you have a collection of students of the following form:
 
     {

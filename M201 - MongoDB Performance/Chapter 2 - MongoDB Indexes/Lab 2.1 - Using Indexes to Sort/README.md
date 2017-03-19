@@ -1,4 +1,4 @@
-#Problem
+# Problem
 In this lab you're going to determine which queries are able to successfully use a given index for both filtering and sorting.
 
 Given the following index:
