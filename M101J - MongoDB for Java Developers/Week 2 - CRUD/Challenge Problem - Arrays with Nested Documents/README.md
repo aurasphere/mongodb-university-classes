@@ -30,5 +30,7 @@ HINT: For this question we are looking for the simplest query that will work. Th
 
 <details>
   <summary>Click here for the solution</summary>
-  - db.movieDetails.find({"awards.oscars.award": "bestPicture"})
+    <ul>
+      <li>db.movieDetails.find({"awards.oscars.award": "bestPicture"})</li>
+	</ul>
 </details>

@@ -34,5 +34,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - 44805
+    <ul>
+      <li>44805</li>
+	</ul>
 </details>

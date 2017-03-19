@@ -21,5 +21,7 @@ Type the number that appears after the colon into the box below, no spaces or pu
 
 <details>
   <summary>Click here for the solution</summary>
-  - 2805
+    <ul>
+      <li>2805</li>
+	</ul>
 </details>

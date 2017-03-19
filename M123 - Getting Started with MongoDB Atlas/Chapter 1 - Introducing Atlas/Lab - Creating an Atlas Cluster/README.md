@@ -47,7 +47,9 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - --username
-  - --password
-  - --ssl
+    <ul>
+      <li>--username</li>
+      <li>--password</li>
+      <li>--ssl</li>
+    </ul>
 </details>

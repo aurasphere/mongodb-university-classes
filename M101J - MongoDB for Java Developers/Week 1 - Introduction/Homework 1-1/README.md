@@ -18,5 +18,7 @@ hint: if you got back a document that looks like { "_id": 1234, "answer": 2468 }
 
 <details>
   <summary>Click here for the solution</summary>
-  - 42
+    <ul>
+      <li>42</li>
+	<ul>
 </details>

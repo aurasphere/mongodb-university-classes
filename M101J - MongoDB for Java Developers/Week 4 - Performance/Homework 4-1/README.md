@@ -67,6 +67,8 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - db.products.find( { 'brand' : "GE" } ).sort( { price : 1 } )
-  - db.products.find( { $and : [ { price : { $gt : 30 } }, { price : { $lt : 50 } } ] } ).sort( { brand : 1 } )
+    <ul>
+      <li>db.products.find( { 'brand' : "GE" } ).sort( { price : 1 } )</li>
+      <li>db.products.find( { $and : [ { price : { $gt : 30 } }, { price : { $lt : 50 } } ] } ).sort( { brand : 1 } )</li>
+    </ul>
 </details>

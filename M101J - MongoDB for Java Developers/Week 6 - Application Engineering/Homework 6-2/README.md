@@ -10,5 +10,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - w="majority", j=1
+    <ul>
+      <li>w="majority", j=1</li>
+	</ul>
 </details>

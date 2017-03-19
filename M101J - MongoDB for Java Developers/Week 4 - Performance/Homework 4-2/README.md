@@ -146,6 +146,8 @@ Check all that apply:
  
 <details>
   <summary>Click here for the solution</summary>
-  - The query uses an index to determine the order in which to return result documents.
-  - The query examines 251120 documents.
+    <ul>
+      <li>The query uses an index to determine the order in which to return result documents.</li>
+      <li>The query examines 251120 documents.</li>
+	</ul>
 </details>

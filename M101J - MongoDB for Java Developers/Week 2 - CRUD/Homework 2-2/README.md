@@ -35,5 +35,7 @@ Choose the best answer:
  
 <details>
   <summary>Click here for the solution</summary>
-  - 22
+    <ul>
+      <li>22</li>
+	</ul>
 </details>

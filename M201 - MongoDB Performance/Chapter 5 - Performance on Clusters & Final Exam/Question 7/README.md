@@ -25,6 +25,8 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - Index #1 would provide a sort to query #3.
-  - Index #2 can be used by both query #1 and #2.
+    <ul>
+      <li>Index #1 would provide a sort to query #3.</li>
+      <li>Index #2 can be used by both query #1 and #2.</li>
+	</ul>
 </details>

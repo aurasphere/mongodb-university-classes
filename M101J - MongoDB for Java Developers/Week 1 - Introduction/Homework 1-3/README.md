@@ -18,5 +18,7 @@ Type the number that appears after the colon into the box below. No spaces, noth
 
 <details>
   <summary>Click here for the solution</summary>
-  - 523258
+    <ul>
+      <li>523258</li>
+	</ul>
 </details>

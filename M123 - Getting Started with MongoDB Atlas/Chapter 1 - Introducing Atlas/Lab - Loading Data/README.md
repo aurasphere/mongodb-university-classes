@@ -24,7 +24,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  <ul>
-  <li>81047</li>
-  </ul>
+    <ul>
+      <li>81047</li>
+    </ul>
 </details>

@@ -64,5 +64,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - { "address.state": 1, "stars": 1, "name": 1 }
+    <ul>
+      <li>{ "address.state": 1, "stars": 1, "name": 1 }</li>
+	</ul>
 </details>

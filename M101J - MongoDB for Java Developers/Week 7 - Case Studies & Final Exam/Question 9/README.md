@@ -13,5 +13,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - patient_id
+    <ul>
+      <li>patient_id</li>
+	</ul>
 </details>

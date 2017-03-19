@@ -41,5 +41,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - 298015
+    <ul>
+      <li>298015</li>
+	</ul>
 </details>

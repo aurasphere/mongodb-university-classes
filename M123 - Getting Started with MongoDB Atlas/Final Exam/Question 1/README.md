@@ -8,6 +8,8 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - You may scale your instances vertically with no downtime.
-  - You may add additional nodes to a replica set after it has been deployed.
+    <ul>
+      <li>You may scale your instances vertically with no downtime.</li>
+      <li>You may add additional nodes to a replica set after it has been deployed.</li>
+	</ul>
 </details>

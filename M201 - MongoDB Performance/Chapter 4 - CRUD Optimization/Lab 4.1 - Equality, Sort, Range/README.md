@@ -16,5 +16,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - { city: 1, lastName: 1, firstName: 1, accountBalance: 1 }
+    <ul>
+      <li>{ city: 1, lastName: 1, firstName: 1, accountBalance: 1 }</li>
+	</ul>
 </details>

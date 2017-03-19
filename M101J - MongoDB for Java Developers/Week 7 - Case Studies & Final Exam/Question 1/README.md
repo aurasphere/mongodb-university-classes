@@ -23,5 +23,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - 3
+    <ul>
+      <li>3</li>
+	</ul>
 </details>

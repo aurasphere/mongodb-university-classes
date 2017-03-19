@@ -16,7 +16,8 @@ To confirm that you've successfully completed these steps run the following quer
 	
 <details>
   <summary>Click here for the solution</summary>
-  - {
+    <ul>
+      <li>{
         "_id" : ObjectId("57d7a135fa937f710a7d6c62"),
         "last_name" : "Webster",
         "quote" : "Reiciendis consectetur ad quibusdam animi deleniti.",
@@ -32,5 +33,6 @@ To confirm that you've successfully completed these steps run the following quer
         "employer" : "Vasquez, Watson and Ross",
         "birthday" : ISODate("2010-03-10T16:54:58Z"),
         "email" : "fcamacho@gmail.com"
-    }
+      }</li>
+	</ul>
 </details>

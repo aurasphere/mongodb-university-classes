@@ -142,6 +142,8 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - The query avoided sorting the documents because it was able to use an index's ordering.
-  - The query scanned every document in the collection.
+    <ul>
+      <li>The query avoided sorting the documents because it was able to use an index's ordering.</li>
+      <li>The query scanned every document in the collection.</li>
+    </ul>
 </details>

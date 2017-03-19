@@ -9,6 +9,8 @@ Check all that apply:
  
 <details>
   <summary>Click here for the solution</summary>
-  - MongoDB provides the infrastructure for Atlas, but not Cloud Manager
-  - MongoDB decides on the server settings for Atlas, but not for Cloud Manager
+    <ul>
+      <li>MongoDB provides the infrastructure for Atlas, but not Cloud Manager</li>
+      <li>MongoDB decides on the server settings for Atlas, but not for Cloud Manager</li>
+    </ul>
 </details>

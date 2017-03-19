@@ -23,5 +23,7 @@ Once the import has finished, connect to the cluster and copy the output of the 
 
 <details>
   <summary>Click here for the solution</summary>
-  - 2
+    <ul>
+      <li>2</li>
+	</ul>
 </details>

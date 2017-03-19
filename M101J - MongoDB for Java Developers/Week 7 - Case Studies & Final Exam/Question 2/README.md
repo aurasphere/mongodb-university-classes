@@ -15,5 +15,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - susan.mara@enron.com to jeff.dasovich@enron.com
+    <ul>
+      <li>susan.mara@enron.com to jeff.dasovich@enron.com</li>
+	</ul>
 </details>

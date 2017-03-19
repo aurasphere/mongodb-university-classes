@@ -10,6 +10,8 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - Indexes can solve the problem of slow queries.
-  - Indexes are fast to search because they're ordered such that you can find target values with few comparisons.
+    <ul>
+      <li>Indexes can solve the problem of slow queries.</li>
+      <li>Indexes are fast to search because they're ordered such that you can find target values with few comparisons.</li>
+	</ul>
 </details>

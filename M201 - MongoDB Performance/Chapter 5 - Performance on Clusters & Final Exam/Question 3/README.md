@@ -11,7 +11,9 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - By default, all MongoDB user-created collections have an _id index.
-  - It's common practice to co-locate your mongos on the same machine as your application to reduce latency.
-  - Collations can be used to create case insensitive indexes.
+    <ul>
+      <li>By default, all MongoDB user-created collections have an _id index.</li>
+      <li>It's common practice to co-locate your mongos on the same machine as your application to reduce latency.</li>
+      <li>Collations can be used to create case insensitive indexes.</li>
+	</ul>  
 </details>

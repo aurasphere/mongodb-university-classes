@@ -17,5 +17,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - 6
+    <ul>
+      <li>6</li>
+	</ul>
 </details>

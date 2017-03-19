@@ -23,5 +23,7 @@ Please copy and paste the complete text of the prompt into the box below and sub
 
 <details>
   <summary>Click here for the solution</summary>
-  - m123-rs1-shard-0:PRIMARY>
+    <ul>
+      <li>m123-rs1-shard-0:PRIMARY></li>
+	</ul>
 </details>

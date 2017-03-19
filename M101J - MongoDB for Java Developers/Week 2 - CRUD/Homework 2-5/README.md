@@ -17,5 +17,7 @@ Choose the best answer:
  
 <details>
   <summary>Click here for the solution</summary>
-  - A Decade of Decadence, Pt. 2: Legacy of Dreams
+    <ul>
+      <li>A Decade of Decadence, Pt. 2: Legacy of Dreams</li>
+	</ul>
 </details>

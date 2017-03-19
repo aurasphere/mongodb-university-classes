@@ -32,5 +32,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - 1
+    <ul>
+      <li>1</li>
+	</ul>
 </details>

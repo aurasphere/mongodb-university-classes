@@ -16,7 +16,9 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - db.people.find({ "first_name": "Jessica" }).sort({ "address.state": 1, "address.city": 1 })
-  - db.people.find({ "first_name": "Jessica", "address.state": { $lt: "S"} }).sort({ "address.state": 1 })
-  - db.people.find({ "address.state": "South Dakota", "first_name": "Jessica" }).sort({ "address.city": -1 })
+    <ul>
+      <li>db.people.find({ "first_name": "Jessica" }).sort({ "address.state": 1, "address.city": 1 })</li>
+      <li>db.people.find({ "first_name": "Jessica", "address.state": { $lt: "S"} }).sort({ "address.state": 1 })</li>
+      <li>db.people.find({ "address.state": "South Dakota", "first_name": "Jessica" }).sort({ "address.city": -1 })</li>
+    </ul>
 </details>

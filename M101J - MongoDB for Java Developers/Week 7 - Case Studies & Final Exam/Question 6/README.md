@@ -30,6 +30,8 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - Remove all indexes from the collection, leaving only the index on _id in place
-  - Set w=0, j=false on writes
+    <ul>
+      <li>Remove all indexes from the collection, leaving only the index on _id in place</li>
+      <li>Set w=0, j=false on writes</li>
+    </ul>
 </details>

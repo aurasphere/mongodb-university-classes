@@ -17,5 +17,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - 15820
+    <ul>
+      <li>15820</li>
+	</ul>
 </details>

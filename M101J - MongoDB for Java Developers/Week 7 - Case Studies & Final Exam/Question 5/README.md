@@ -64,8 +64,10 @@ Check all that apply:
  
 <details>
   <summary>Click here for the solution</summary>
-  - a_1_b_1
-  - a_1_c_1
-  - c_1
-  - a_1_b_1_c_-1
+    <ul>
+      <li>a_1_b_1</li>
+      <li>a_1_c_1</li>
+      <li>c_1</li>
+      <li>a_1_b_1_c_-1</li>
+	</ul>
 </details>

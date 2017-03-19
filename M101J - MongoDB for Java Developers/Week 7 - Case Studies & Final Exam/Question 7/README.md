@@ -53,5 +53,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - 44,787
+    <ul>
+      <li>44,787</li>
+	</ul>
 </details>

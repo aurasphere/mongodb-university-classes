@@ -10,7 +10,9 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - { "a" : 1, "b" : { "b" : 1, "c" : "foo", "d" : "bar", "e" : [1, 2, 4] } }
-  - { "title" : "Star Wars", "quotes" : [ "Use the Force", "These are not the droids you are looking for" ], "director" : "George Lucas" }
-  - {}
+    <ul>
+      <li>{ "a" : 1, "b" : { "b" : 1, "c" : "foo", "d" : "bar", "e" : [1, 2, 4] } }</li>
+      <li>{ "title" : "Star Wars", "quotes" : [ "Use the Force", "These are not the droids you are looking for" ], "director" : "George Lucas" }</li>
+      <li>{}</li>
+    </ul>
 </details>

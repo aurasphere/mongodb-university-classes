@@ -47,5 +47,7 @@ Enter the student ID below. Please enter just the number, with no spaces, commas
 
 <details>
   <summary>Click here for the solution</summary>
-  - 54
+    <ul>
+      <li>54</li>
+	</ul>
 </details>

@@ -23,5 +23,7 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - alert 1
+    <ul>
+      <li>alert 1</li>
+	</ul>
 </details>

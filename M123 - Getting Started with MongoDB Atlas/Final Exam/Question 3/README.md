@@ -20,5 +20,7 @@ Please input your answer below.
 
 <details>
   <summary>Click here for the solution</summary>
-  - "Keep up the good work!"
+    <ul>
+      <li>"Keep up the good work!"</li>
+	</ul>
 </details>

@@ -53,5 +53,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-   - s1
+    <ul>
+      <li>s1</li>
+	</ul>
 </details>

@@ -22,5 +22,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-   - Elizabet Kleine
+    <ul>
+      <li>Elizabet Kleine</li>
+	</ul>
 </details>

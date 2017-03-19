@@ -9,6 +9,8 @@ Check all that apply:
 
 <details>
   <summary>Click here for the solution</summary>
-  - The minimum sensible number of voting nodes to a replica set is three.
-  - The oplog utilizes a capped collection.
+    <ul>
+      <li>The minimum sensible number of voting nodes to a replica set is three.</li>
+      <li>The oplog utilizes a capped collection.</li>
+	</ul>
 </details>

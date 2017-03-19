@@ -10,5 +10,7 @@ Choose the best answer:
 
 <details>
   <summary>Click here for the solution</summary>
-  - Turning a replica set into a sharded cluster
+    <ul>
+      <li>Turning a replica set into a sharded cluster</li>
+	</ul>
 </details>
