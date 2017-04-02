@@ -30,9 +30,9 @@
 @REM ================================================================================
 
 @REM Makes a backup of the oplog.
-mongodump -d local -c oplog.rs -o oplog
-mongo backupDB --eval "db.dropDatabase()"
-mongorestore -d backuptest chapter_2_backup_options_and_disaster_recovery.fc802e5f557f/backupD__homework_m202_w3_week3_wk3_536bf4708bb48b4bb3853ec2/backupDB/backupColl.bson
+mongodump -d local -c oplog.rs -o oplog --port 30001
+mongo backupDB --eval "db.dropDatabase()" --port 30001
+mongorestore --port 30001 chapter_2_backup_options_and_disaster_recovery.fc802e5f557f/backupD__homework_m202_w3_week3_wk3_536bf4708bb48b4bb3853ec2/backupDB/backupColl.bson 
 
 @REM Restores replaying the oplog until the dump operation (found out with the js script).
-mongorestore --oplogReplay --oplogLimit 1398778745:1 --oplogFile oplog/local/oplog.rs.bson .
+mongorestore --oplogReplay --oplogLimit 1398778745:1 --oplogFile oplog/local/oplog.rs.bson --port 30001 .
