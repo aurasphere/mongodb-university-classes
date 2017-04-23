@@ -25,9 +25,9 @@
 # ============================================================================== #
 #																				 #
 # DESCRIPTION : Solution for MongoDB University M202's Homework 2-1.             #
-# AUTHOR : Donato Rimenti														 #				
+# AUTHOR : Donato Rimenti														 #
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti									 #
-# LICENSE : MIT																	 # 
+# LICENSE : MIT																	 #
 #																				 #
 # ============================================================================== #
 
