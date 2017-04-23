@@ -23,12 +23,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  #
 # SOFTWARE.                                                                      #
 # ============================================================================== #
-#																				 #
+#                                                                                #
 # DESCRIPTION : Solution for MongoDB University M202's Homework 5-2.             #
-# AUTHOR : Donato Rimenti														 #
-# COPYRIGHT : Copyright (c) 2017 Donato Rimenti									 #
-# LICENSE : MIT																	 #
-#																				 #
+# AUTHOR : Donato Rimenti                                                        #
+# COPYRIGHT : Copyright (c) 2017 Donato Rimenti                                  #
+# LICENSE : MIT                                                                  #
+#                                                                                #
 # ============================================================================== #
 
 # Unzip the files and prints the relevant lines to the homework solution.

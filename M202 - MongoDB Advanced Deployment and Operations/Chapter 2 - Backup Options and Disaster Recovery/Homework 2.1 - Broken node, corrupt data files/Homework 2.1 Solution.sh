@@ -23,12 +23,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  #
 # SOFTWARE.                                                                      #
 # ============================================================================== #
-#																				 #
+#                                                                                #
 # DESCRIPTION : Solution for MongoDB University M202's Homework 2-1.             #
-# AUTHOR : Donato Rimenti														 #
-# COPYRIGHT : Copyright (c) 2017 Donato Rimenti									 #
-# LICENSE : MIT																	 #
-#																				 #
+# AUTHOR : Donato Rimenti                                                        #
+# COPYRIGHT : Copyright (c) 2017 Donato Rimenti                                  #
+# LICENSE : MIT                                                                  #
+#                                                                                #
 # ============================================================================== #
 
 # Deletes the corrupted files from secondary (they will be resync'd from primary).
