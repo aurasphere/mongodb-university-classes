@@ -23,12 +23,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  #
 # SOFTWARE.                                                                      #
 # ============================================================================== #
-#																				 #
-# DESCRIPTION : Sets up the DB for MongoDB University M101J's Final Exam. 		 #
-# AUTHOR : Donato Rimenti														 #
-# COPYRIGHT : Copyright (c) 2017 Donato Rimenti									 #
-# LICENSE : MIT																	 #
-#																				 #
+#                                                                                #
+# DESCRIPTION : Sets up the DB for MongoDB University M101J's Final Exam.        #
+# AUTHOR : Donato Rimenti                                                        #
+# COPYRIGHT : Copyright (c) 2017 Donato Rimenti                                  #
+# LICENSE : MIT                                                                  #
+#                                                                                #
 # ============================================================================== #
 
 # Restores DB for Question 1-2-3.
