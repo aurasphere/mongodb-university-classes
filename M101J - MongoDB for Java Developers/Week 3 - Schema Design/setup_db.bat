@@ -1,4 +1,4 @@
-@REM ================================================================================
+@REM ==============================================================================
 @REM MIT License                                                                   
 @REM                                                                               
 @REM Copyright (c) 2017 Donato Rimenti                                             
@@ -20,14 +20,14 @@
 @REM LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 @REM OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 @REM SOFTWARE.                                                                     
-@REM ================================================================================
-@REM																			
+@REM ==============================================================================
+@REM																			   
 @REM DESCRIPTION : Sets up the DB for MongoDB University M101J's Week 3 homeworks. 
-@REM AUTHOR : Donato Rimenti																	
-@REM COPYRIGHT : Copyright (c) 2017 Donato Rimenti								
-@REM LICENSE : MIT																 
-@REM																			
-@REM ================================================================================
+@REM AUTHOR : Donato Rimenti													   
+@REM COPYRIGHT : Copyright (c) 2017 Donato Rimenti								   
+@REM LICENSE : MIT																   
+@REM																			   
+@REM ==============================================================================
 
 @REM Restores DB for Homework 3-1.
 mongoimport --drop -d school -c students week_3_schema_design.1f26260f0b08/students.json

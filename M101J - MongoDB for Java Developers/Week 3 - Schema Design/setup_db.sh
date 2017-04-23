@@ -25,9 +25,9 @@
 # ============================================================================== #
 #																				 #
 # DESCRIPTION : Sets up the DB for MongoDB University M101J's Week 3 homeworks.  #
-# AUTHOR : Donato Rimenti														 #				
+# AUTHOR : Donato Rimenti														 #
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti									 #
-# LICENSE : MIT																	 # 
+# LICENSE : MIT																	 #
 #																				 #
 # ============================================================================== #
 
