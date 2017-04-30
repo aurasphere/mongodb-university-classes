@@ -16,8 +16,6 @@ Unless you are already familiar with mloginfo, you may want to examine the docs.
 
 When you have the answer, please enter the pattern from your results. In the example above, you would enter { "page" : 1, "count" : { "$gte" : 1 } }.
 
-
-
 <details>
   <summary>Click here for the solution</summary>
     <ul>
