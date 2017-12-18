@@ -1,0 +1,42 @@
+1. 
+	mongod
+	mongo --shell week6 week6__hw6.1_m102_52b491d5e2d4237593ca1d3a.js
+	homework.init()
+	db.trades.stats()
+	mongod --shardsvr
+	
+	mongod --configsvr --replSet csReplSet --port 27019 --dbpath 1
+	mongod --configsvr --replSet csReplSet --port 27020 --dbpath 2
+	mongod --configsvr --replSet csReplSet --port 27021 --dbpath 3
+
+	mongo --port 27019
+
+	rs.initiate({ _id: "csReplSet", members:[
+			{ _id : 0, host : "localhost:27019" },
+			{ _id : 1, host : "localhost:27020" },
+			{ _id : 2, host : "localhost:27021" }]});
+	
+	mongos --configdb csReplSet/Lenovo-PC:27019
+	mongo --shell week6 week6__hw6.1_m102_52b491d5e2d4237593ca1d3a.js
+	sh.addShard("localhost:27018")
+	db.trades.find().pretty()
+	db.trades.count()
+	db.trades.stats()
+	homework.a()
+
+2.	
+	sh.enableSharding("week6")
+	db.trades.createIndex( { ticker : 1, time : 1 } )
+	sh.shardCollection("week6.trades", { ticker : 1, time : 1 } )
+	db.chunks.find({}, {min:1,max:1,shard:1,_id:0,ns:1})
+	homework.b()
+
+3.
+		mongod --shardsvr --dbpath 4 --port 27022
+		sh.addShard("localhost:27022")
+		homework.check1()
+		db.chunks.aggregate( [
+			{ $match : { ns : "week6.trades" } } ,
+			{ $group : { _id : "$shard", n : { $sum : 1 } } }
+			] )
+		 homework.c()
