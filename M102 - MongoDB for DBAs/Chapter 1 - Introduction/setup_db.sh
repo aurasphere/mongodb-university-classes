@@ -24,12 +24,12 @@
 # SOFTWARE.                                                                      #
 # ============================================================================== #
 #                                                                                #
-# DESCRIPTION : Sets up the DB for MongoDB University M102's Week 2 homeworks.   #
+# DESCRIPTION : Sets up the DB for MongoDB University M102's Week 1 homeworks.   #
 # AUTHOR : Donato Rimenti                                                        #
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti                                  #
 # LICENSE : MIT                                                                  #
 #                                                                                #
 # ============================================================================== #
 
-# Imports DB for week 2.
-mongoimport --drop -d pcat -c products chapter_2_crud_and_administrative_commands/Products__hw1.2_m102_529e39a8e2d42347509fb3f0.json
+# Imports DB for week 1.
+mongoimport --drop -d pcat -c products chapter_1_introduction/Products__hw1.2_m102_529e39a8e2d42347509fb3f0.json
