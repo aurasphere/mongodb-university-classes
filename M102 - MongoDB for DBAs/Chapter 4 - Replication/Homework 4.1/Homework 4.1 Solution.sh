@@ -24,25 +24,18 @@
 # SOFTWARE.                                                                      #
 # ============================================================================== #
 #                                                                                #
-# DESCRIPTION : Solution for MongoDB University M102's Homework 5-1.             #
+# DESCRIPTION : Solution for MongoDB University M102's Homework 4-1.             #
 # AUTHOR : Donato Rimenti                                                        #
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti                                  #
 # LICENSE : MIT                                                                  #
 #                                                                                #
 # ============================================================================== #
 
-# Creates the data directories.
-mkdir 1
-mkdir 2
-mkdir 3
+# Starts a server.
+start mongod
 
-# Starts the servers for the replica set.
-mongod --port 27001 --replSet rs --dbpath 1 --fork
-mongod --port 27002 --replSet rs --dbpath 2 --fork
-mongod --port 27003 --replSet rs --dbpath 3 --fork
-
-# Waits for the servers to go up.
+# Waits for the server.
 sleep 5
 
-# Initializes the replica set.
-mongo --port 27001 --eval "rs.initiate({ _id: 'rs', members: [{ _id: 0, host : 'localhost:27001' }, { _id: 1, host : 'localhost:27002' }, { _id: 2, host : 'localhost:27003', arbiterOnly: true }]}); sleep(5000); print('Solution : ' + rs.status().members[2].state);"
+# Prints the solution.
+mongo --eval "load('../chapter_4_replication/replication.js'); homework.init(); print('Solution : ' + homework.a());"

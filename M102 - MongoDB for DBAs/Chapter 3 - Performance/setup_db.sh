@@ -24,25 +24,12 @@
 # SOFTWARE.                                                                      #
 # ============================================================================== #
 #                                                                                #
-# DESCRIPTION : Solution for MongoDB University M102's Homework 5-1.             #
+# DESCRIPTION : Sets up the DB for MongoDB University M102's Week 3 homeworks.   #
 # AUTHOR : Donato Rimenti                                                        #
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti                                  #
 # LICENSE : MIT                                                                  #
 #                                                                                #
 # ============================================================================== #
 
-# Creates the data directories.
-mkdir 1
-mkdir 2
-mkdir 3
-
-# Starts the servers for the replica set.
-mongod --port 27001 --replSet rs --dbpath 1 --fork
-mongod --port 27002 --replSet rs --dbpath 2 --fork
-mongod --port 27003 --replSet rs --dbpath 3 --fork
-
-# Waits for the servers to go up.
-sleep 5
-
-# Initializes the replica set.
-mongo --port 27001 --eval "rs.initiate({ _id: 'rs', members: [{ _id: 0, host : 'localhost:27001' }, { _id: 1, host : 'localhost:27002' }, { _id: 2, host : 'localhost:27003', arbiterOnly: true }]}); sleep(5000); print('Solution : ' + rs.status().members[2].state);"
+# Imports DB for week 3.
+mongoimport --drop -d pcat -c products chapter_3_performance/products__homework_m102_week3_5518c233d8ca39395277dfbf/products.json

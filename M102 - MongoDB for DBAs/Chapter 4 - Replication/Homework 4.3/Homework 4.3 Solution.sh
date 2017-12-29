@@ -24,25 +24,34 @@
 # SOFTWARE.                                                                      #
 # ============================================================================== #
 #                                                                                #
-# DESCRIPTION : Solution for MongoDB University M102's Homework 5-1.             #
+# DESCRIPTION : Solution for MongoDB University M102's Homework 4-3.             #
 # AUTHOR : Donato Rimenti                                                        #
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti                                  #
 # LICENSE : MIT                                                                  #
 #                                                                                #
 # ============================================================================== #
 
-# Creates the data directories.
+# Creates the data dirs.
 mkdir 1
 mkdir 2
 mkdir 3
 
-# Starts the servers for the replica set.
-mongod --port 27001 --replSet rs --dbpath 1 --fork
-mongod --port 27002 --replSet rs --dbpath 2 --fork
-mongod --port 27003 --replSet rs --dbpath 3 --fork
+# Starts a server.
+mongod --dbpath 1 --fork
 
-# Waits for the servers to go up.
+# Waits for the server.
 sleep 5
 
-# Initializes the replica set.
-mongo --port 27001 --eval "rs.initiate({ _id: 'rs', members: [{ _id: 0, host : 'localhost:27001' }, { _id: 1, host : 'localhost:27002' }, { _id: 2, host : 'localhost:27003', arbiterOnly: true }]}); sleep(5000); print('Solution : ' + rs.status().members[2].state);"
+# Inits the DB and shuts it down.
+mongo admin --eval "load('../chapter_4_replication/replication.js'); homework.init(); db.shutdownServer(); quit();"
+
+# Starts the replica set.
+mongod --port 27001 --dbpath 1 --replSet replSet --fork
+mongod --port 27002 --dbpath 2 --replSet replSet --fork
+mongod --port 27003 --dbpath 3 --replSet replSet --fork
+
+# Waits for the server.
+sleep 5
+
+# Prints the solution.
+mongo replication --port 27001 --eval "load('../chapter_4_replication/replication.js'); rs.initiate({ _id: 'replSet', members:[{ _id : 0, host : 'localhost:27001' }, { _id : 1, host : 'localhost:27002' }, { _id : 2, host : 'localhost:27003' }]}); sleep(20000); print('Solution : ' + homework.c());"
