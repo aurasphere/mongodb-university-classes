@@ -24,7 +24,7 @@
 # SOFTWARE.                                                                      #
 # ============================================================================== #
 #                                                                                #
-# DESCRIPTION : Solution for MongoDB University M102's Homework 6-1.             #
+# DESCRIPTION : Sets up the DB for MongoDB University M102's Week 6 homeworks.   #
 # AUTHOR : Donato Rimenti                                                        #
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti                                  #
 # LICENSE : MIT                                                                  #
@@ -35,6 +35,7 @@
 mkdir 1
 mkdir 2
 mkdir 3
+mkdir 4
 
 # Starts a server.
 start mongod
@@ -58,13 +59,10 @@ mongod --configsvr --replSet csReplSet --port 27021 --dbpath 3 --fork
 sleep 5
 
 # Inits the replica set.
-mongo --port 27019 --eval "rs.initiate({ _id: 'csReplSet', members:[{ _id : 0, host : 'localhost:27019' }, { _id : 1, host : 'localhost:27020' }, { _id : 2, host : 'localhost:27021' }]});"
+mongo --port 27019 --eval "try {rs.initiate({ _id: 'csReplSet', members:[{ _id : 0, host : 'localhost:27019' }, { _id : 1, host : 'localhost:27020' }, { _id : 2, host : 'localhost:27021' }]}); } catch(e){}"
 
 # Starts mongos.
 mongos --configdb csReplSet/localhost:27019 --fork
 
-# Waits for the servers.
-sleep 30
-
-# Adds the shard and prints the solution.
-mongo week6 --eval "load('../chapter_6_scalability/week6__hw6.1_m102_52b491d5e2d4237593ca1d3a.js'); sh.addShard('localhost:27018'); print('Solution : ' + homework.a());"
+# Starts another server for homework 6.3.
+mongod --shardsvr --dbpath 4 --port 27022 --fork

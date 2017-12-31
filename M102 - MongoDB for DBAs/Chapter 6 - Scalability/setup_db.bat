@@ -22,7 +22,7 @@
 @REM SOFTWARE.                                                                     
 @REM ==============================================================================
 @REM																			   
-@REM DESCRIPTION : Solution for MongoDB University M102's Homework 6-3. 
+@REM DESCRIPTION : Sets up the DB for MongoDB University M102's Week 6 homeworks. 
 @REM AUTHOR : Donato Rimenti													   
 @REM COPYRIGHT : Copyright (c) 2017 Donato Rimenti								   
 @REM LICENSE : MIT																   
@@ -30,13 +30,37 @@
 @REM ==============================================================================
 
 @REM Creates the data directories.
+mkdir 1
+mkdir 2
+mkdir 3
 mkdir 4
 
 @REM Starts a server.
-start mongod --shardsvr --dbpath 4 --port 27022
+start mongod
 
 @REM Waits for the server.
 timeout 5
 
 @REM Inits the homework.
-mongo --shell week6 --eval "load('../chapter_6_scalability/week6__hw6.1_m102_52b491d5e2d4237593ca1d3a.js'); sh.addShard('localhost:27022'); homework.check1(); sleep(10000); print('Solution : ' + homework.c());"
+mongo week6 --eval "load('chapter_6_scalability/week6__hw6.1_m102_52b491d5e2d4237593ca1d3a.js'); try{ homework.init(); } catch(e){} db.getSiblingDB('admin').shutdownServer();"
+
+@REM Waits for the servers.
+timeout 2
+
+@REM Starts the servers for the replica set.
+start mongod --shardsvr
+start mongod --configsvr --replSet csReplSet --port 27019 --dbpath 1
+start mongod --configsvr --replSet csReplSet --port 27020 --dbpath 2
+start mongod --configsvr --replSet csReplSet --port 27021 --dbpath 3
+
+@REM Waits for the servers.
+timeout 5
+
+@REM Inits the replica set.
+mongo --port 27019 --eval "try {rs.initiate({ _id: 'csReplSet', members:[{ _id : 0, host : 'localhost:27019' }, { _id : 1, host : 'localhost:27020' }, { _id : 2, host : 'localhost:27021' }]}); } catch(e){}"
+
+@REM Starts mongos.
+start mongos --configdb csReplSet/localhost:27019
+
+@REM Starts another server for homework 6.3.
+start mongod --shardsvr --dbpath 4 --port 27022

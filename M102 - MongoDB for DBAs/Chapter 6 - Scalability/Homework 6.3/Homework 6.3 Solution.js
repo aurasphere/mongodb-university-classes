@@ -28,24 +28,17 @@ var db = db.getSiblingDB('week6');
  // Loads the homework JS.
 load("../chapter_6_scalability/week6__hw6.1_m102_52b491d5e2d4237593ca1d3a.js");
 
-// Creates an index.
-db.trades.createIndex( { ticker : 1, time : 1 } );
+// Adds the new shard.
+sh.addShard('localhost:27022'); 
 
-// Enables sharding and shards the trades collection.
-sh.enableSharding("week6");
-sh.shardCollection("week6.trades", { ticker : 1, time : 1 } );
+// Checks the status of the shards.
+homework.check1(); 
 
-// This query is used if you want to check the chunks.
-db.chunks.find({}, {
-	min : 1,
-	max : 1,
-	shard : 1,
-	_id : 0,
-	ns : 1
-});
+// Waits for the balancer.
+sleep(20000); 
 
 // Executes the checking script.
-var result = homework.b();
+var result = homework.c();
 
 // Prints the result.
 print("Solution : " + result);

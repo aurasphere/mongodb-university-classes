@@ -25,27 +25,11 @@
 // Gets the DB.
 var db = db.getSiblingDB('week6');
 
- // Loads the homework JS.
-load("../chapter_6_scalability/week6__hw6.1_m102_52b491d5e2d4237593ca1d3a.js");
-
-// Creates an index.
-db.trades.createIndex( { ticker : 1, time : 1 } );
-
-// Enables sharding and shards the trades collection.
-sh.enableSharding("week6");
-sh.shardCollection("week6.trades", { ticker : 1, time : 1 } );
-
-// This query is used if you want to check the chunks.
-db.chunks.find({}, {
-	min : 1,
-	max : 1,
-	shard : 1,
-	_id : 0,
-	ns : 1
-});
-
-// Executes the checking script.
-var result = homework.b();
-
+// Loads the homework JS.
+load('../chapter_6_scalability/week6__hw6.1_m102_52b491d5e2d4237593ca1d3a.js'); 
+ 
+// Adds the shard.
+sh.addShard('localhost:27018'); 
+ 
 // Prints the result.
-print("Solution : " + result);
+print('Solution : ' + homework.a());
