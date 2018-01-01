@@ -24,7 +24,7 @@
 # SOFTWARE.                                                                      #
 # ============================================================================== #
 #                                                                                #
-# DESCRIPTION : Solution for MongoDB University M102's Final Exam Question 1.    #
+# DESCRIPTION : Solution for MongoDB University M102's Final Exam Question 4.    #
 # AUTHOR : Donato Rimenti                                                        #
 # COPYRIGHT : Copyright (c) 2017 Donato Rimenti                                  #
 # LICENSE : MIT                                                                  #
@@ -32,40 +32,11 @@
 # ============================================================================== #
 
 # Starts the servers with the provided script.
-../final_exam.127c39d04bb9/rollback_553ed0e3d8ca3966d777dfe0/a.sh
+..\final_exam.127c39d04bb9\rollback_553ed0e3d8ca3966d777dfe0\a.bat
 
 # Waits for the script to end.
 sleep 5
 
-# Inits the replica set.
-mongo --port 27003 --eval "load('../final_exam.127c39d04bb9/rollback_553ed0e3d8ca3966d777dfe0/a.js'); ourinit();"
 
-# Waits for the init.
-sleep 10
-
-# Steps down the first server in case it's the primary.
-mongo --port 27001 --eval "rs.stepDown();"
-
-# Waits for the stepdown.
-sleep 2
-
-# Inserts some record into the DB.
-mongo test --port 27003 --eval "db.foo.insertMany( [{ _id : 1 }, { _id : 2 }, { _id : 3 }], { writeConcern : { w : 2 } } );" 
-
-# Shutdown the first server.
-mongo admin --port 27001 --eval "db.shutdownServer();"
-
-# Waits for the server to shutdown.
-sleep 5
-
-# Inserts other records.
-mongo test --port 27003 --eval "db.foo.insertMany( [{ _id : 4 }, { _id : 5 }, { _id : 6 }] );"
-
-# Starts the server.
-mongod --port 27001 --dbpath data/z1 --replSet z --fork
-
-# Waits for the server to startup.
-sleep 10
-
-# Prints the solution.
-mongo --port 27001 --eval "rs.slaveOk(); print('Solution : ' + db.foo.count());"
+# Reconfigures the replica set and prints the solution.
+mongo --port 27003 --eval "load('../final_exam.127c39d04bb9/rollback_553ed0e3d8ca3966d777dfe0/a.js'); ourinit(); var c = rs.conf(); c.members[2].priority = 0; rs.stepDown(); rs.reconfig(c, {force : true}); print('Solution : ' + part4());"

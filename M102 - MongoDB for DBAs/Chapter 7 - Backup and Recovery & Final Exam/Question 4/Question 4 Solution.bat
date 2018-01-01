@@ -22,7 +22,7 @@
 @REM SOFTWARE.                                                                     
 @REM ==============================================================================
 @REM																			   
-@REM DESCRIPTION : Solution for MongoDB University M102's Final Exam Question 1.  
+@REM DESCRIPTION : Solution for MongoDB University M102's Final Exam Question 4.  
 @REM AUTHOR : Donato Rimenti													   
 @REM COPYRIGHT : Copyright (c) 2017 Donato Rimenti								   
 @REM LICENSE : MIT																   
@@ -35,35 +35,5 @@ start ..\final_exam.127c39d04bb9\rollback_553ed0e3d8ca3966d777dfe0\a.bat
 @REM Waits for the script to end.
 timeout 5
 
-@REM Inits the replica set.
-mongo --port 27003 --eval "load('../final_exam.127c39d04bb9/rollback_553ed0e3d8ca3966d777dfe0/a.js'); ourinit();"
-
-@REM Waits for the init.
-timeout 10
-
-@REM Steps down the first server in case it's the primary.
-mongo --port 27001 --eval "rs.stepDown();"
-
-@REM Waits for the stepdown.
-timeout 2
-
-@REM Inserts some record into the DB.
-mongo test --port 27003 --eval "db.foo.insertMany( [{ _id : 1 }, { _id : 2 }, { _id : 3 }], { writeConcern : { w : 2 } } );" 
-
-@REM Shutdown the first server.
-mongo admin --port 27001 --eval "db.shutdownServer();"
-
-@REM Waits for the server to shutdown.
-timeout 5
-
-@REM Inserts other records.
-mongo test --port 27003 --eval "db.foo.insertMany( [{ _id : 4 }, { _id : 5 }, { _id : 6 }] );"
-
-@REM Starts the server.
-start mongod --port 27001 --dbpath data/z1 --replSet z 
-
-@REM Waits for the server to startup.
-timeout 10
-
-@REM Prints the solution.
-mongo --port 27001 --eval "rs.slaveOk(); print('Solution : ' + db.foo.count());"
+@REM Reconfigures the replica set and prints the solution.
+mongo --port 27003 --eval "load('../final_exam.127c39d04bb9/rollback_553ed0e3d8ca3966d777dfe0/a.js'); ourinit(); var c = rs.conf(); c.members[2].priority = 0; rs.stepDown(); rs.reconfig(c, {force : true}); print('Solution : ' + part4());"

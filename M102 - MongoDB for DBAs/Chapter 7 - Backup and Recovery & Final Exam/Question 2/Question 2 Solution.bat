@@ -22,7 +22,7 @@
 @REM SOFTWARE.                                                                     
 @REM ==============================================================================
 @REM																			   
-@REM DESCRIPTION : Solution for MongoDB University M102's Final Exam Question 1.  
+@REM DESCRIPTION : Solution for MongoDB University M102's Final Exam Question 2.  
 @REM AUTHOR : Donato Rimenti													   
 @REM COPYRIGHT : Copyright (c) 2017 Donato Rimenti								   
 @REM LICENSE : MIT																   
@@ -39,7 +39,7 @@ timeout 5
 mongo --port 27003 --eval "load('../final_exam.127c39d04bb9/rollback_553ed0e3d8ca3966d777dfe0/a.js'); ourinit();"
 
 @REM Waits for the init.
-timeout 10
+timeout 20
 
 @REM Steps down the first server in case it's the primary.
 mongo --port 27001 --eval "rs.stepDown();"
@@ -59,11 +59,23 @@ timeout 5
 @REM Inserts other records.
 mongo test --port 27003 --eval "db.foo.insertMany( [{ _id : 4 }, { _id : 5 }, { _id : 6 }] );"
 
-@REM Starts the server.
+@REM Shutdown the other server.
+mongo admin --port 27003 --eval "db.shutdownServer({force : true});"
+
+@REM Starts the first server.
 start mongod --port 27001 --dbpath data/z1 --replSet z 
 
 @REM Waits for the server to startup.
 timeout 10
 
+@REM Adds a new record.
+mongo --port 27001 --eval "db.foo.insert( { _id : 'last' } );"
+
+@REM Starts the last server.
+start mongod --port 27003 --dbpath data/z3 --replSet z 
+
+@REM Waits for the server to startup.
+timeout 10
+
 @REM Prints the solution.
-mongo --port 27001 --eval "rs.slaveOk(); print('Solution : ' + db.foo.count());"
+mongo --port 27001 --eval "rs.slaveOk(); var result = db.foo.find(); print('Solution : '); while (result.hasNext()) {printjson(result.next());}"
