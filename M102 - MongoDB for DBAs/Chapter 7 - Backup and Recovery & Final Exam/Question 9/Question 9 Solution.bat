@@ -22,18 +22,21 @@
 @REM SOFTWARE.                                                                     
 @REM ==============================================================================
 @REM																			   
-@REM DESCRIPTION : Solution for MongoDB University M102's Final Exam Question 8.  
+@REM DESCRIPTION : Solution for MongoDB University M102's Final Exam Question 9.  
 @REM AUTHOR : Donato Rimenti													   
 @REM COPYRIGHT : Copyright (c) 2017 Donato Rimenti								   
 @REM LICENSE : MIT																   
 @REM																			   
 @REM ==============================================================================
 
-@REM Creates a data directory.
+@REM Creates the data directories.
 mkdir data
+mkdir data\config
+mkdir data\s1
+mkdir data\s2
 
-@REM Starts the server.
-start mongod --configsvr --dbpath data --replSet repl --port 27019
+@REM Starts the config server.
+start mongod --configsvr --dbpath data/config --replSet repl --port 27019
 
 @REM Waits for the server.
 timeout 5
@@ -44,8 +47,20 @@ mongo --port 27019 --eval "rs.initiate()"
 @REM Waits for the server.
 timeout 10
 
-@REM Restores the DB.
+@REM Restores the config DB.
 mongorestore --port 27019 ..\final_exam.127c39d04bb9\gene_backup_553f1c22d8ca396a7a77dfee\gene_backup\config_server
 
+@REM Updates the shards configuration.
+mongo config --port 27019 --eval "db.shards.update({_id:'s1'},{host:'localhost:27001'}); db.shards.update({_id:'s2'},{host:'localhost:27002'})"
+
+@REM Starts the shard servers.
+start mongod --port 27001 --dbpath data/s1 --shardsvr
+start mongod --port 27002 --dbpath data/s2 --shardsvr
+start mongos --configdb repl/localhost:27019
+
+@REM Restores the shards DB.
+mongorestore --port 27001 ..\final_exam.127c39d04bb9\gene_backup_553f1c22d8ca396a7a77dfee\gene_backup\s1
+mongorestore --port 27002 ..\final_exam.127c39d04bb9\gene_backup_553f1c22d8ca396a7a77dfee\gene_backup\s2
+
 @REM Prints the solution.
-mongo config --port 27019 --eval "print('Solution : ' + db.chunks.find().sort({_id:1}).next().lastmodEpoch.getTimestamp().toUTCString().substr(20,6));"
+mongo snps --eval "print('Solution : ' + db.elegans.aggregate( [ { $match : { N2 : 'T' } } , { $group : { _id:'$N2' , n : { $sum : 1 } } } ] ).next().n);"
