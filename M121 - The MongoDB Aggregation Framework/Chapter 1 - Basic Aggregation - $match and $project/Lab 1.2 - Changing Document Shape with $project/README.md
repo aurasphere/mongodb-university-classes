@@ -8,15 +8,15 @@ Using the same $match stage from the previous lab, add a $project stage to only 
 
  - Assign the results to a variable called pipeline.
 
-    var pipeline = [{ $match: {. . .} }, { $project: { . . . } }]
+       var pipeline = [{ $match: {. . .} }, { $project: { . . . } }]
 
  - Load validateLab2.js which was included in the same handout as validateLab1.js and execute validateLab2(pipeline)?
 
-    load('./validateLab2.js')
+       load('./validateLab2.js')
 
  - And run the validateLab2 validation method
 
-    validateLab2(pipeline)
+       validateLab2(pipeline)
 
 What is the answer?
 
