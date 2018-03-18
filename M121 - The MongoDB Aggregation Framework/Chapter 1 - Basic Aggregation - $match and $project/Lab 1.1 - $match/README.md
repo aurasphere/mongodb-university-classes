@@ -28,7 +28,6 @@ Assign the aggregation to a variable named pipeline, like:
 What is the answer?
 
 Choose the best answer:
-
  - 15
  - 30
  - 12

@@ -10,7 +10,6 @@ To get the count, you can append itcount() to the end of your pipeline
     db.movies.aggregate([...]).itcount()
 
 Choose the best answer:
-
  - 9447
  - 144
  - 8068

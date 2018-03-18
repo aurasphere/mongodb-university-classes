@@ -21,7 +21,6 @@ Using the same $match stage from the previous lab, add a $project stage to only 
 What is the answer?
 
 Choose the best answer:
-
  - 15
  - 4
  - 7
