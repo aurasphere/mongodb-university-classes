@@ -15,15 +15,15 @@ Assign the aggregation to a variable named pipeline, like:
 
  - As a hint, your aggregation should return 23 documents. You can verify this by typing 
 
-    db.movies.aggregate(pipeline).itcount()
+       db.movies.aggregate(pipeline).itcount()
 
  - Load validateLab1.js into mongo shell
 
-    load('validateLab1.js')
+       load('validateLab1.js')
 
  - And run the validateLab1 validation method
 
-    validateLab1(pipeline)
+       validateLab1(pipeline)
 
 What is the answer?
 
