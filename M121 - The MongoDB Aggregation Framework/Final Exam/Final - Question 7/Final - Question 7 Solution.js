@@ -38,13 +38,13 @@ var pipeline = [
         as : "alliance"
         }
     },
-    { $group : {
-        "_id" : '$alliance.name',
-        "carriers" : { $sum : 1 }
+	{ $group : {
+        "_id" : '$airline.id',
+        "alliance" : { $first: "$alliance" }
         }
     },
-	{ $match : { "_id" : { $not : { $size : 0 } } } },
-	{ $sort : { "carriers" : -1 } },
+	{ $match : { "alliance" : { $not : { $size : 0 } } } },
+	{ $sortByCount : "$alliance" },
 	{ $limit : 1 }
 ];
 
