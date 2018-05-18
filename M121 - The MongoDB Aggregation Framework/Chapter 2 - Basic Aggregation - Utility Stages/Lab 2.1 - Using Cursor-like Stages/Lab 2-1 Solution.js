@@ -34,7 +34,8 @@ var favorites = [
 // Builds the pipeline.
 var pipeline = [
     { $match : { 
-	    "tomatoes.viewer.rating" : { $gte : 3 }, 
+		"tomatoes.viewer.rating": { $gte: 3 },
+		"countries": { $in: ["USA"] },
 		"cast" : { $exists : true }
 		} 
 	},
@@ -45,7 +46,7 @@ var pipeline = [
 		"title" : -1
 	    },
 	},
-	{ $skip : 25 }
+	{ $skip : 24 }
 ];
 
 // Prints the result.
