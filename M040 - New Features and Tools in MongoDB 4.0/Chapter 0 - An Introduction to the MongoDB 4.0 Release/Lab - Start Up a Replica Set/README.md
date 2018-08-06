@@ -19,8 +19,8 @@ If you are running the lab locally in Windows and not using the Vagrant environm
 
  1. Start up 3 mongod processes
 
-    mongod --version
-    db version v4.0.#######
+        mongod --version
+        db version v4.0.#######
 
 Now download and unzip the environment_setup.zip handout. There should be 3 configuration files for Windows: rs1_win.conf, rs2_win.conf, and rs3_win.conf.
 
