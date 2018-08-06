@@ -16,7 +16,7 @@ loader.py is a script that does the following set of steps:
 
  - connects to a MongoDB replica set (by default running on this course m040 VM).
  
-mongodb://m040:27017/m040?replicaSet=M040
+       mongodb://m040:27017/m040?replicaSet=M040
 
  - Drops any previous existing data in the m040.cities and m040.city_stats collections.
  - Opens the data.json file and process it in batches. Each batch is processed by its own thread/process to simulate concurrent database write load.
@@ -193,8 +193,9 @@ in handle_commit(s)
                     print("Commit error: {} retrying commit ... ".format(exc))
                     continue
                 else:
-                    raise</li>
-		<li>Code Block B
+                    raise
+   </li>
+<li>Code Block B
 
 in load_data(q, batch, uri)
 
@@ -210,6 +211,6 @@ in load_data(q, batch, uri)
                  s.abort_transaction()
                  continue
               else:
-                 raise</li>
-    </ul>
+                 raise
+</li></ul>
 </details>
