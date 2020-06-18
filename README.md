@@ -1,6 +1,16 @@
 # MongoDB University <img src="https://static1.squarespace.com/static/513914cde4b0f86e34bbb954/t/58d2c758725e25221a20ed53/1490208601230/mongodb-logo.png" width="3%" height="3%"/>
+
+## Overview
 Courseware and solutions of problems from MongoDB University's classes that I've attended.
 
+## Sponsor
+This project is sponsored by [GitAds](https://tracking.gitads.io/?campaign=gitads&repo=mongodb-university-classes&redirect=gitads.io). You can click on the banner to support it!
+
+<a href="https://tracking.gitads.io/?campaign=gitads&repo=mongodb-university-classes&redirect=gitads.io">
+  <img alt="GitAds banner" src="/assets/sponsor/720X300-2.png" />
+</a>
+
+## Structure
 This repository is organized into different folders. Each folder represents a class that I've attended at MongoDB University. Each class  directory will contain a directory for each week of duration (each one with a different topic) plus one with the final exam and its solution. In each week folder you will find the following:
 
  - A zip file with the week's handouts and other courseware material.
