@@ -1,4 +1,4 @@
-# MongoDB University <img src="https://static1.squarespace.com/static/513914cde4b0f86e34bbb954/t/58d2c758725e25221a20ed53/1490208601230/mongodb-logo.png" width="3%" height="3%"/>
+# MongoDB University
 
 ## Overview
 Courseware and solutions of problems from MongoDB University's classes that I've attended.
