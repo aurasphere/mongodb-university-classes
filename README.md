@@ -3,11 +3,11 @@
 ## Overview
 Courseware and solutions of problems from MongoDB University's classes that I've attended.
 
-## Sponsor
-This project is sponsored by [PopSQL](https://tracking.gitads.io/?campaign=popsql&repo=mongodb-university-classes&redirect=popsql.com%2F%3Futm_source%3Dgitads). Support us by using PopSQL to do collaborative SQL!
+## Supporting the project
+You can support the project by checking out our sponsor page. It takes only one click:
 
 <a href="https://tracking.gitads.io/?campaign=gitads&repo=mongodb-university-classes&redirect=popsql.com%2F%3Futm_source%3Dgitads">
-  <img alt="PopSQL banner" src="assets/sponsor/720X300-2.png" />
+  <img alt="Sponsor banner" src="https://images.gitads.io/mongodb-university-classes" />
 </a>
 <br><i>This advert was placed by <a href="https://tracking.gitads.io/?campaign=gitads&repo=mongodb-university-classes&redirect=gitads.io">GitAds</a> </i>
 
