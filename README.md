@@ -5,13 +5,6 @@
 ## Overview
 Courseware and solutions of problems from MongoDB University's classes that I've attended.
 
-## Supporting the project
-You can support the project by checking out our sponsor page. It takes only one click:
-
-<a href="https://tracking.gitads.io/?repo=mongodb-university-classes">
-    <img src="https://images.gitads.io/mongodb-university-classes" alt="GitAds"/>
-</a>
-
 ## Structure
 This repository is organized into different folders. Each folder represents a class that I've attended at MongoDB University. Each class  directory will contain a directory for each week of duration (each one with a different topic) plus one with the final exam and its solution. In each week folder you will find the following:
 
