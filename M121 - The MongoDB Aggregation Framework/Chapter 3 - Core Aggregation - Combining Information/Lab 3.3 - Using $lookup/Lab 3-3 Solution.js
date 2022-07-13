@@ -24,24 +24,33 @@
  
 // Builds the pipeline.
 var pipeline = [
-    { $unwind : "$airlines" },
-    { $lookup: {
-            from: "air_routes",
-            localField: "airlines",
-            foreignField: "airline.name",
-            as: "routes"
-        }
-    },
-    { $unwind : "$routes" },
-	{ $match : { "routes.airplane" : { $in : [ "747", "380" ] } } },
-    { $group : {
-		"_id" : "$name",
-		"routes_count" : { $sum : 1 } 
-	    }
-	},
-	{ $sort : {"routes_count" : -1 } }
+  {
+    $match: {
+      airplane: /747|380/
+    }
+  },
+  {
+    $lookup: {
+      from: "air_alliances",
+      foreignField: "airlines",
+      localField: "airline.name",
+      as: "alliance"
+    }
+  },
+  {
+    $unwind: "$alliance"
+  },
+  {
+    $group: {
+      _id: "$alliance.name",
+      count: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { count: -1 }
+  }
 ];
 
 // Prints the result.
 print("Result: ");
-printjson(db.air_alliances.aggregate(pipeline).next(););
+printjson(db.air_routes.aggregate(pipeline).next());
